@@ -69,6 +69,10 @@ vows.describe('Test suite for node-config')
       assert.equal(CONFIG.TestModule.parm1, 'value1');
     },
 
+    'Loading configurations from a CJS file is correct': function() {
+      assert.equal(CONFIG.AnotherModule.parm10, 'value10');
+    },
+
     'Loading configurations from a JSON file is correct': function() {
       assert.equal(CONFIG.AnotherModule.parm1, 'value1');
       assert.equal(CONFIG.Inline.a, '');
